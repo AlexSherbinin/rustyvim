@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.cmd('set clipboard+=unnamedplus')
 
 return {
 	neo_tree = {
@@ -14,7 +15,8 @@ return {
 	},
 	telescope = {
 		find_files = "<leader>tt",
-		lsp_symbols = "<leader>tl"
+		lsp_symbols = "<leader>tl",
+		diagnostics = "<leader>td"
 	},
 	hop = {
 		word = "<leader>h"
