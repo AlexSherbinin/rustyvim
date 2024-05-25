@@ -3,8 +3,9 @@ return {
 	dependencies = {
 		'hrsh7th/cmp-nvim-lsp',
 		'neovim/nvim-lspconfig',
-		'L3MON4D3/LuaSnip',
-		'saadparwaiz1/cmp_luasnip'
+		'hrsh7th/cmp-buffer',
+		'hrsh7th/cmp-path',
+		'hrsh7th/cmp-cmdline'
 	},
 	config = function()
 		local cmp = require('cmp')
@@ -13,7 +14,7 @@ return {
 		cmp.setup {
 			snippet = {
 				expand = function(args)
-					require('luasnip').lsp_expand(args.body)
+					vim.snippet.expand(args.body)
 				end
 			},
 			window = {
@@ -29,8 +30,22 @@ return {
 			},
 			sources = cmp.config.sources {
 				{ name = 'nvim_lsp' },
-				{ name = 'luasnip' }
 			}
 		}
+
+		cmp.setup.cmdline({ '/', '?' }, {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = 'buffer' }
+			}
+		})
+
+		cmp.setup.cmdline(':', {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = 'path' },
+				{ name = 'cmdline' }
+			}
+		})
 	end
 }
