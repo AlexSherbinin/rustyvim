@@ -4,7 +4,6 @@ vim.cmd('set clipboard+=unnamedplus')
 return {
 	neo_tree = {
 		open_file_tree = "<leader>f",
-		open_git_tree = "<leader>gt"
 	},
 	cmp = {
 		confirm = "<CR>",
@@ -50,5 +49,8 @@ return {
 	},
 	format_on_save = {
 		toggle = "<leader>/"
+	},
+	lazygit = {
+		open = "<leader>gg"
 	}
 }
