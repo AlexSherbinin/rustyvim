@@ -2,14 +2,14 @@ vim.cmd('colorscheme tokyonight')
 
 local transparent = require('transparent')
 transparent.setup {
-  groups = {
-    'Normal', 'NormalNC', 'NormalSB', 'Comment', 'Constant', 'Special', 'Identifier',
-    'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
-    'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
-    'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
-    'EndOfBuffer', 'NormalFloat', 'Float', 'FloatBorder', 'FloatShadow', 'FloatShadowThrough',
-    'FloatTitle', 'lualine_c_normal', 'lualine_c_inactive', 'LspInlayHint'
-  }
+	groups = {
+		'Normal', 'NormalNC', 'NormalSB', 'Comment', 'Constant', 'Special', 'Identifier',
+		'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+		'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+		'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
+		'EndOfBuffer', 'NormalFloat', 'Float', 'FloatBorder', 'FloatShadow', 'FloatShadowThrough',
+		'FloatTitle', 'lualine_c_normal', 'lualine_c_inactive', 'LspInlayHint'
+	}
 }
 local transparent_prefixes = { "NeoTree", "Cmp", "Telescope" }
 for _, prefix in ipairs(transparent_prefixes) do
@@ -30,6 +30,8 @@ vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = "#1E88E5" })
 
 vim.api.nvim_set_hl(0, 'LspInlayHint', { fg = "#52c78c" })
 vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = "NONE" })
+
+vim.api.nvim_set_hl(0, 'Comment', { fg = "#52c78c" })
 
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
