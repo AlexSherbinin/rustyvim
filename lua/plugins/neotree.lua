@@ -9,7 +9,7 @@ return {
 
 	config = function()
 		require('neo-tree').setup {
-			popup_border_style = "rounded",
+			popup_border_style = require('core.theme').border,
 			window = {
 				position = "float"
 			},

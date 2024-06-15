@@ -1,7 +1,7 @@
 require('core.lazy')
 require('core.plugins')
 require('core.format-on-save')
-require('core.theme')
+require('core.theme-applier')
 
 -- Load language configurations
 local utils = require('utils')
