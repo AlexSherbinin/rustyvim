@@ -29,7 +29,8 @@ vim.g.rustaceanvim = function()
 				["rust-analyzer"] = {
 					procMacro = {
 						ignored = {
-							["rustyui-macro"] = { "composable" }
+							["rustyui-macro"] = { "composable" },
+							["async-trait"] = { "async_trait" }
 						}
 					}
 				}
